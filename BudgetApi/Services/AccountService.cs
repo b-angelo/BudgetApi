@@ -1,8 +1,6 @@
 ﻿using BudgetApi.Models;
-using BudgetApi.ViewModels;
 using System;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 
 namespace BudgetApi.Services
@@ -50,15 +48,22 @@ namespace BudgetApi.Services
             return account;
         }
 
-        public bool CreateAccount(Account account)
+        public bool CreateAccount(NewAccountInputModel model)
         {
             try
             {
-                account.StartDate = DateTime.Now;
-                account.CreateDate = DateTime.Now;
-                account.CreatedBy = Environment.UserName;
+                var account = new Account()
+                {
+                    Name = model.Name,
+                    Description = model.Description,
+                    StartDate = DateTime.Now,
+                    CreateDate = DateTime.Now,
+                    CreatedBy = Environment.UserName
+                };
+
                 db.Accounts.Add(account);
                 db.SaveChanges();
+                                
                 return true;
             }
             catch (Exception e)

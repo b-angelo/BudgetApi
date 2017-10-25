@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BudgetApi.ViewModels
+namespace BudgetApi.Models
 {
     public class ExpenseVM : BaseVm
     {

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace BudgetApi.ViewModels
+namespace BudgetApi.Models
 {
     public abstract class BaseVm
     {

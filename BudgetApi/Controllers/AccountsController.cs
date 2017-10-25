@@ -1,13 +1,8 @@
 ﻿using BudgetApi.Models;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Net;
-using System.Web.Http;
-using System.Web.Http.Description;
 using BudgetApi.Services;
+using System.Net;
 using System.Net.Http;
-using BudgetApi.ViewModels;
+using System.Web.Http;
 
 namespace BudgetApi.Controllers
 {
@@ -35,9 +30,9 @@ namespace BudgetApi.Controllers
             }
         }
 
-        public HttpResponseMessage PostAccount(Account account)
+        public HttpResponseMessage PostAccount(NewAccountInputModel model)
         {
-            if (_accountService.CreateAccount(account))
+            if (_accountService.CreateAccount(model))
             {
                 return Request.CreateResponse(HttpStatusCode.OK);
             }

@@ -1,4 +1,4 @@
-﻿namespace BudgetApi.ViewModels
+﻿namespace BudgetApi.Models
 {
     public class IncomeVm : BaseVm
     {
