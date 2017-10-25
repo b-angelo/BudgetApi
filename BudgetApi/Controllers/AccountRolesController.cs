@@ -12,13 +12,11 @@ namespace BudgetApi.Controllers
     {
         private BudgetEntities db = new BudgetEntities();
 
-        // GET: api/AccountRoles
         public IQueryable<AccountRole> GetAccountRoles()
         {
             return db.AccountRoles;
         }
-
-        // GET: api/AccountRoles/5
+        
         [ResponseType(typeof(AccountRole))]
         public IHttpActionResult GetAccountRole(int id)
         {
@@ -30,8 +28,7 @@ namespace BudgetApi.Controllers
 
             return Ok(accountRole);
         }
-
-        // PUT: api/AccountRoles/5
+        
         [ResponseType(typeof(void))]
         public IHttpActionResult PutAccountRole(int id, AccountRole accountRole)
         {
@@ -66,8 +63,7 @@ namespace BudgetApi.Controllers
 
             return StatusCode(HttpStatusCode.NoContent);
         }
-
-        // POST: api/AccountRoles
+        
         [ResponseType(typeof(AccountRole))]
         public IHttpActionResult PostAccountRole(AccountRole accountRole)
         {
@@ -81,8 +77,7 @@ namespace BudgetApi.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = accountRole.AccountRole_Pk }, accountRole);
         }
-
-        // DELETE: api/AccountRoles/5
+        
         [ResponseType(typeof(AccountRole))]
         public IHttpActionResult DeleteAccountRole(int id)
         {

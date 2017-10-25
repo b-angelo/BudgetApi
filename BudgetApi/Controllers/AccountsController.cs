@@ -16,13 +16,11 @@ namespace BudgetApi.Controllers
         private BudgetEntities db = new BudgetEntities();
         private AccountService _accountService = new AccountService();
 
-           // GET: api/Accounts/5
         public AccountVm GetAccount(int id)
         {
            return _accountService.GetAccountDetails(id);
         }
 
-        // PUT: api/Accounts/5
         public HttpResponseMessage PutAccount(int id, Account account)
         {
             if (account.Account_Pk == 0) account.Account_Pk = id;
@@ -37,7 +35,6 @@ namespace BudgetApi.Controllers
             }
         }
 
-        // POST: api/Accounts
         public HttpResponseMessage PostAccount(Account account)
         {
             if (_accountService.CreateAccount(account))

@@ -16,13 +16,11 @@ namespace BudgetApi.Controllers
     {
         private BudgetEntities db = new BudgetEntities();
 
-        // GET: api/Incomes
         public IQueryable<Income> GetIncomes()
         {
             return db.Incomes;
         }
-
-        // GET: api/Incomes/5
+        
         [ResponseType(typeof(Income))]
         public IHttpActionResult GetIncome(int id)
         {
@@ -34,8 +32,7 @@ namespace BudgetApi.Controllers
 
             return Ok(income);
         }
-
-        // PUT: api/Incomes/5
+        
         [ResponseType(typeof(void))]
         public IHttpActionResult PutIncome(int id, Income income)
         {
@@ -70,7 +67,6 @@ namespace BudgetApi.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Incomes
         [ResponseType(typeof(Income))]
         public IHttpActionResult PostIncome(Income income)
         {
@@ -84,8 +80,7 @@ namespace BudgetApi.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = income.Income_Pk }, income);
         }
-
-        // DELETE: api/Incomes/5
+        
         [ResponseType(typeof(Income))]
         public IHttpActionResult DeleteIncome(int id)
         {
