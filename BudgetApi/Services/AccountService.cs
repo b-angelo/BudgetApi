@@ -42,7 +42,9 @@ namespace BudgetApi.Services
                                                      EndDate = abh.EndDate.Value
                                                  }).ToList(),
                                StartDate = a.StartDate,
-                               EndDate = a.EndDate
+                               EndDate = a.EndDate,
+                               Name = a.Name,
+                               Description = a.Description
                            }).FirstOrDefault();
 
             return account;
