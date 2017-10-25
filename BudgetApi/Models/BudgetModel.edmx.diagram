@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="329558b209f94362b0456f5949a1f284" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="BudgetModel.Account" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.AccountBalance" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.AccountBalanceHistory" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.AccountRole" Width="1.5" PointX="3.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.Expense" Width="1.5" PointX="6" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.ExpenseSchedule" Width="1.5" PointX="3.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.Income" Width="1.5" PointX="6" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.IncomeSchedule" Width="1.5" PointX="3.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.Payment" Width="1.5" PointX="8.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.User" Width="1.5" PointX="3.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.UserAccount" Width="1.5" PointX="6" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.UserRole" Width="1.5" PointX="1.5" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.AccessLog" Width="1.5" PointX="6" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.ChangeLog" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BudgetModel.ErrorLog" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="BudgetModel.FK__AccountBa__Accou__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__AccountBa__Accou__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__Payee__Account_F__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__Payor__Account_F__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__UserAccou__Accou__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__UserAccou__Accou__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__Payee__ExpenseSc__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__Payment__Payee_F__37703C52" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__Payor__IncomeSch__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__AccessLog__User___42E1EEFE" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__User__UserRole_F__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="BudgetModel.FK__UserAccou__User___208CD6FA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
