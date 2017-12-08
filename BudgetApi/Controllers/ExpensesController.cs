@@ -9,12 +9,13 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using BudgetApi.Models;
+using BudgetApi.Entities;
 
 namespace BudgetApi.Controllers
 {
     public class ExpensesController : ApiController
     {
-        private BudgetEntities db = new BudgetEntities();
+        private BudgetApiDbContext db = new BudgetApiDbContext();
 
         public IQueryable<Expense> GetExpenses()
         {

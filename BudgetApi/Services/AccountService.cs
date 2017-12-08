@@ -1,4 +1,5 @@
-﻿using BudgetApi.Models;
+﻿using BudgetApi.Entities;
+using BudgetApi.Models;
 using System;
 using System.Data.Entity;
 using System.Linq;
@@ -7,7 +8,7 @@ namespace BudgetApi.Services
 {
     public class AccountService
     {
-        private BudgetEntities db = new BudgetEntities();
+        private BudgetApiDbContext db = new BudgetApiDbContext();
         private LoggingService _loggingService = new LoggingService();
 
         public AccountVm GetAccountDetails(int accountId)

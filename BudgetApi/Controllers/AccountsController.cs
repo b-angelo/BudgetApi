@@ -1,4 +1,5 @@
-﻿using BudgetApi.Models;
+﻿using BudgetApi.Entities;
+using BudgetApi.Models;
 using BudgetApi.Services;
 using System.Net;
 using System.Net.Http;
@@ -8,7 +9,7 @@ namespace BudgetApi.Controllers
 {
     public class AccountsController : ApiController
     {
-        private BudgetEntities db = new BudgetEntities();
+        private BudgetApiDbContext db = new BudgetApiDbContext();
         private AccountService _accountService = new AccountService();
 
         public AccountVm GetAccount(int id)

@@ -5,12 +5,13 @@ using System.Linq;
 using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
+using BudgetApi.Entities;
 
 namespace BudgetApi.Controllers
 {
     public class AccountRolesController : ApiController
     {
-        private BudgetEntities db = new BudgetEntities();
+        private BudgetApiDbContext db = new BudgetApiDbContext();
 
         public IQueryable<AccountRole> GetAccountRoles()
         {
