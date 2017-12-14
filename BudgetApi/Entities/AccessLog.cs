@@ -7,7 +7,7 @@ namespace BudgetApi.Entities
     using System.Data.Entity.Spatial;
 
     [Table("logging.AccessLog")]
-    public partial class AccessLog
+    public partial class AccessLog : EntityBase
     {
         [Key]
         public int Access_Pk { get; set; }
@@ -19,17 +19,6 @@ namespace BudgetApi.Entities
 
         [StringLength(50)]
         public string Device { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string CreatedBy { get; set; }
-
-        public DateTime CreateDate { get; set; }
-
-        [StringLength(50)]
-        public string ModifiedBy { get; set; }
-
-        public DateTime? ModifiedDate { get; set; }
 
         public virtual User User { get; set; }
     }

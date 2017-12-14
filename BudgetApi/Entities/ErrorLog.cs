@@ -7,7 +7,7 @@ namespace BudgetApi.Entities
     using System.Data.Entity.Spatial;
 
     [Table("logging.ErrorLog")]
-    public partial class ErrorLog
+    public partial class ErrorLog : EntityBase
     {
         [Key]
         public int ErrorLog_Pk { get; set; }
@@ -17,16 +17,5 @@ namespace BudgetApi.Entities
         [Required]
         [StringLength(500)]
         public string ErrorMessage { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string CreatedBy { get; set; }
-
-        public DateTime CreateDate { get; set; }
-
-        [StringLength(50)]
-        public string ModifiedBy { get; set; }
-
-        public DateTime? ModifiedDate { get; set; }
     }
 }

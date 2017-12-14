@@ -7,7 +7,7 @@ namespace BudgetApi.Entities
     using System.Data.Entity.Spatial;
 
     [Table("AccountBalance")]
-    public partial class AccountBalance
+    public partial class AccountBalance : EntityBase
     {
         [Key]
         public int AccountBalance_Pk { get; set; }
@@ -19,17 +19,6 @@ namespace BudgetApi.Entities
         public DateTime StartDate { get; set; }
 
         public DateTime? EndDate { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string CreatedBy { get; set; }
-
-        public DateTime CreateDate { get; set; }
-
-        [StringLength(50)]
-        public string ModifiedBy { get; set; }
-
-        public DateTime? ModifiedDate { get; set; }
 
         public virtual Account Account { get; set; }
     }

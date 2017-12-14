@@ -7,7 +7,7 @@ namespace BudgetApi.Entities
     using System.Data.Entity.Spatial;
 
     [Table("Payment")]
-    public partial class Payment
+    public partial class Payment : EntityBase
     {
         [Key]
         public int Payment_PK { get; set; }
@@ -17,17 +17,6 @@ namespace BudgetApi.Entities
         public decimal? AmountPaid { get; set; }
 
         public DateTime? DatePaid { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string CreatedBy { get; set; }
-
-        public DateTime CreateDate { get; set; }
-
-        [StringLength(50)]
-        public string ModifiedBy { get; set; }
-
-        public DateTime? ModifiedDate { get; set; }
 
         public virtual Expense Expense { get; set; }
     }

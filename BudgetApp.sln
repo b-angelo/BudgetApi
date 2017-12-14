@@ -7,12 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetApi", "BudgetApi\Budg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetApi.Tests", "BudgetApi.Tests\BudgetApi.Tests.csproj", "{4075B72B-82AB-4063-B0AB-EE7F273DCA47}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{0989310D-35EF-40D6-8D0B-B07B42A3BF3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetWebApp", "BudgetWebApp\BudgetWebApp.csproj", "{2606177E-DF07-47A7-9A3E-F24B693FD89C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{432989E6-9117-48B8-9D28-BFB02DE528C5}"
 	ProjectSection(SolutionItems) = preProject
 		CreateTables.sql = CreateTables.sql
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetWebApp", "BudgetWebApp\BudgetWebApp.csproj", "{2606177E-DF07-47A7-9A3E-F24B693FD89C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -116,6 +116,8 @@ namespace BudgetApi.Services
             var ran = new Random();
             var ranNum = ran.Next(111111111, 999999999);
 
+            var checkDigit = 001;
+
             while (accountNums.Contains(ranNum))
             {
                 ranNum = ran.Next(111111111, 999999999);
