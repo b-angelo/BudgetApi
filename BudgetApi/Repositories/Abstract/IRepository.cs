@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace BudgetApi.Repositories.Contracts
 {
-    //public interface IRepository Type
-    //{
-    //    Type GetById ()
-    //}
+    public interface IRepository<T> where T : class
+    {
+        T GetEntity(int id);
+        void CreateEntity(T Entity);
+        void UpdateEntity(T Entity);
+        void Commit();
+    }
 }

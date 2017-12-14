@@ -12,10 +12,10 @@ namespace BudgetApi.Controllers
         private BudgetApiDbContext db = new BudgetApiDbContext();
         private AccountService _accountService = new AccountService();
 
-        public AccountVm GetAccount(int id)
-        {
-           return _accountService.GetAccountDetails(id);
-        }
+        //public AccountVm GetAccount(int id)
+        //{
+        //   return _accountService.GetAccountDetails(id);
+        //}
 
         public HttpResponseMessage PutAccount(int id, Account account)
         {
@@ -41,6 +41,13 @@ namespace BudgetApi.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
+        }
+
+        [HttpGet]
+        public AccountVm GetAccountById(int id)
+        {
+            var account = _accountService.GetAccountById(id);
+            return account;
         }
 
         protected override void Dispose(bool disposing)

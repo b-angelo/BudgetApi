@@ -3,6 +3,7 @@ using BudgetApi.Models;
 using System;
 using System.Data.Entity;
 using System.Linq;
+using BudgetApi.Repositories.Concrete;
 
 namespace BudgetApi.Services
 {
@@ -10,6 +11,7 @@ namespace BudgetApi.Services
     {
         private BudgetApiDbContext db = new BudgetApiDbContext();
         private LoggingService _loggingService = new LoggingService();
+        private AccountRepository _accountRepository = new AccountRepository();
 
         public AccountVm GetAccountDetails(int accountId)
         {
@@ -106,6 +108,20 @@ namespace BudgetApi.Services
         private bool AccountExists(int id)
         {
             return db.Accounts.Count(e => e.Account_Pk == id) > 0;
+        }
+
+        public AccountVm GetAccountById(int id)
+        {
+            var account = _accountRepository.GetEntity(id);
+
+            var accountVm = new AccountVm
+            {
+                Id = account.Account_Pk,
+                Name = account.Name,
+                Description = account.Description
+            };
+
+            return accountVm;
         }
 
         private long RandAccountNum()
